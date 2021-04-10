@@ -233,34 +233,29 @@ li {
     }
 
     .header {
-        padding: 20px;
+        padding: 15px;
     }
 
     .header h2 {
-        font-size: 29px;
+        font-size: 20px;
     }
 
     #time {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .datetime {
-        font-size: 23px;
-    }
-
-    textarea {
-        padding: 10px;
-        height: 200px;
+        font-size: 17px;
     }
 
     .front-page button {
-        padding: 23px;
-        font-size: 20px;
+        padding: 15px;
+        font-size: 15px;
     }
 
     .notes-link {
-        padding: 20px;
-        font-size: 20px;
+        padding: 18px;
+        font-size: 15px;
     }
 
 
@@ -271,20 +266,20 @@ li {
 
 
     .second-page {
-        height: 700px;
+        height: 450px;
         max-width: 800px;
     }
 
     .second-page h3 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     li {
-        padding: 18px 10px;
-        font-size: 24px;
+        padding: 15px 10px;
+        font-size: 15px;
     }
 
     .second-page .notes-link {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
