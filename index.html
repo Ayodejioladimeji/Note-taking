@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taker App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="particles.js"></script>
+</head>
+
+<body>
+    <div class="front-page">
+        <div class="header">
+            <h2>Note Taking</h2>  
+            <h4 id="time"></h4>
+        </div>
+
+        <div class="datetime">
+            <p class="weekday"></p>,&nbsp;
+            <p class="month"></p>
+        </div>
+        <textarea id="note" name="note-text" class="note"></textarea>
+        <br>
+        <button id="submit" onclick="saveNote()" class="submit">Submit</button>
+
+        <div class="notes-link">
+            <a href="index2.html">View Notes</a>
+        </div>
+    </div>
+
+    
+    <script>
+
+        var textElement = document.getElementById('note')
+
+        function saveNote() {
+            
+            if(textElement.value === "") {
+                return alert('Input field cannot be empty!')
+            }
+
+            const id = getNoteId()
+            let noteObject = getExistingNotes()
+            if (!noteObject) {
+                noteObject = {}
+            }
+            noteObject[id] = textElement.value
+            localStorage.setItem('notes', JSON.stringify(noteObject))
+            alert('Note Saved')
+
+            
+        }
+    </script>
+
+    <script src="time.js"></script>
+
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</body>
+
+</html>
